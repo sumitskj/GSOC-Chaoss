@@ -23,4 +23,3 @@ repo = GitHub(owner=owner, repository=repo, api_token=args.token)
 for item in repo.fetch():
     print(item['data']['user']['login'])
 
-# token : 0d3f52f75666427f2b421c96e257d4f5f0cfc3f8
