@@ -3,6 +3,7 @@ import argparse
 import os
 import shutil
 from graal.graal import GraalRepository
+from graal.backends.core.cocom import CoCom
 
 # Parse command line arguments
 parser = argparse.ArgumentParser(description='Arguments passing')
@@ -19,11 +20,15 @@ repo_uri = args.uri
 # commit SHA
 sha = args.hash
 
+print("Cloning stated..")
+
+
 # making string - git command to clone
-str = 'git clone --mirror '+ repo_uri + ' /tmp/repo'
+str = 'git clone --mirror ' + repo_uri + ' /tmp/repo'
 
 # removing the repositiories earlier stored in /tmp/repo folder
-shutil.rmtree('/tmp/repo')
+if os.path.isdir('/tmp/repo'):
+    shutil.rmtree('/tmp/repo')
 
 # Cloning
 os.system(str)

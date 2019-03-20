@@ -15,15 +15,15 @@ For Microtask 2, I have made the python script [Microtask 2](Microtask2.py). In 
 The code on execution requires two arguments 1. Github repo as "owner/repo" 2. Github auth token (optinal argument).
 The script on execution gives output the usernames of all the persons who made commit on the repo.
 
-Example: python perceval_username.py -r owner/repo -t XXXX
+Example: python microtask2.py -r owner/repo -t XXXX
 
 Output: 
 ![output](Output2.png)
 
 
-**Microtask 3: **
-
-**Microtask 4: **
+**Microtask 3:**
+ji
+**Microtask 4:**
 
 For Microtask 4, I have made the python script [Microtask 4](Microtask4.py). This script finds if an given GitHub repo is on the Showheritage or not and also shows the date of last visit.
 
@@ -32,6 +32,8 @@ The script on execution first takes github repo url as an argument, then it uses
 Base API url: "https://archive.softwareheritage.org/"
 Finding repo url (origin endpoint): "https://archive.softwareheritage.org"+"/api/1/origin/(origin_type)/url/(origin_url)/"
 Finding visits url (visit url) : "https://archive.softwareheritage.org" + "origin_visits_url"
+
+Example: python microtask4.py -u "repo_url"
 
 Output: 
 ![pic](Output4.png)
@@ -46,15 +48,23 @@ For mirotask 5, I have installed the graal package on PyCharm. Now I can run gra
 **Microtask 6: **
 
 For Microtask 6, I have made the python script [Microtask 6](Microtask6.py). In this I have executed Graal using Cocom backend. 
-The code on execution requires two arguments 1. Github repo as "owner/repo" 2. Github auth token (optinal argument).
-The script on execution gives output the usernames of all the persons who made commit on the repo.
+The code on execution requires argument the url of repo. The script on execution gives output the commit dates of all the commits on the repo.
 
-Example: python perceval_username.py -r owner/repo -t XXXX
+Example: python microtask6.py -u "url"
 
 Output: 
-![output](output2.png)
+![output6](output6.png)
 
 
 **Microtask 8: **
 
 
+For Microtask 8, I have made the python script [Microtask 8](Microtask8.py). This script takes the repo url and a commit SHA as inputs, then it clones that repo if it isn't there, then it checkouts to the given commit SHA and then finally performs an flake8 on that.
+
+In the script, we first take the url and commit SHA as arguments, then here we will be using Cocom backend. Now we create an Cocom object which takes parameters as repo url and the path where to clone and then execute an fetch() method which will clone the repo to the folder path given. Now to make a checkout to the given commit we have, first we have to create an GraalRepository object which takes parameters as repo url and cloned repo path and then we need to create an worktree for our repo about the commits and have to update worktree path. Then using this object we call GraalRepository checkout() method  which will checkout us to the certain commit. Then using the os module we will execute an flake8 on the repo.
+
+Example: python checkout.py -u "url" -c "commit SHA"
+
+Output:
+
+![pic](Output8.png)
