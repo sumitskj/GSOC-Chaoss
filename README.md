@@ -25,17 +25,19 @@ Output:
 
 
 1.What is the meaning of the JSON attribute 'timestamp'?<br />
-  The attribute 'timestamp' gives the date and time of the moment when the code got executed and gave us the information back.<br />
+  The attribute 'timestamp' gives the date and time of the moment when the code got executed and gave us the information back. Timestamp is in 'epoch' format which can be converted into date and time.<br />
 
 2.What is the meaning of the JSON attribute 'updated_on'?<br />
-  
+  This attribute shows the date and time of when was the repo got last updated.<br />
 
-3.What is the meaning of the JSON attribute 'origin'?
-  It shows the origin from where 
-
+3.What is the meaning of the JSON attribute 'origin'?<br />
+  It shows the link of from where the information of repo is fetched. It usually shows the git repo link.<br />
+<br />
 4.What is the meaning of the JSON attribute 'category'?
+  It shows what type of operation was performed, usually it is a commit operation.<br />
 
-5.What is the meaning of the JSON attribute 'uuid'?
+5.What is the meaning of the JSON attribute 'uuid'?<br />
+  It is a 128 bit unique number given to that operation. It is uaually universally unique.<br />
 
 6.Which are the common methods of the Perceval backends?<br />
   Common methods of perceval backends are fetch(), fetch_items(), has_archiving(), has_resuming(), metadata_id(), metadata_category(), etc.<br />
@@ -96,7 +98,7 @@ The code on execution requires argument the url of repo. The script on execution
 Example: python microtask6.py -u "url"
 
 Output: 
-![output6](output6.png)
+![output6](Output6.png)
 
 **Microtask 7:**
 <br />
