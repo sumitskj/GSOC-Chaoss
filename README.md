@@ -20,7 +20,7 @@ In microtask 3 I have to answer various questions which can be found at [Microta
 **Microtask 4:**<br />
 
 
-For Microtask 4, I have made the python script [Microtask 4](microtask4/Microtask4.py). This script finds if an given GitHub repo is on the SoftwareHeritage or not and also shows the date of last visit.
+For Microtask 4, I have made the python script [Microtask 4](microtask4/Microtask4.py). This script finds if an given GitHub repo is on the SoftwareHeritage or not and also shows the date of last visit. The task can be found at [Microtask3](microtask3).
 
 
 **Microtask 5:**<br />
@@ -42,7 +42,7 @@ In microtask 7 I have to answer various questions which can be found at [Microta
 **Microtask 8:**
 
 
-For Microtask 8, I have made the python script [Microtask 8](microtask8/Microtask8.py). This script takes the repo url and a commit SHA as inputs, then it clones that repo if it isn't there, then it checkouts to the given commit SHA and then finally performs an flake8 on that.
+For Microtask 8, I have made the python script [Microtask 8](microtask8/Microtask8.py). This script takes the repo url and a commit SHA as inputs, then it clones that repo if it isn't there, then it checkouts to the given commit SHA and then finally performs an flake8 on that. The task can be found at [Microtask8](microtask8).
 
 
 **Microtask 9:**
