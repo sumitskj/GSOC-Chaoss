@@ -1,18 +1,16 @@
 
-For Microtask 2, I have made the python script [git-backend](git-backend.py). In this I have executed the Perceval using GitHub backend. 
-The code on execution requires two arguments 1. Github repo as "owner/repo" 2. Github auth token (optinal argument).
-The script on execution gives output the usernames of all the persons who made commit on the repo.
+For Microtask 2, I have made the python script to run perceval command with git backend and github backend. With git as backend the script is [git-backend](git-backend.py) and when github is backend the script is [github-backend](github-backend.py). The [github-backend](github-backend.py) script on execution gives output the usernames of all the persons who made commit on the repo and [git-backend](git-backend.py) gives output the number of commits that are made alond with their date and time.
 <br />
 
-Output: <br />
-Using Git Backend:<br />
-Command : ```python git-backend.py```
+**Output:** <br />
+* Using Git Backend:<br />
+  Command : ```python git-backend.py```
 
 ![git-backend](img1.png)
 <br />
 
-Using Github Backend: <br />
-Command : ```python github-backend.py```
+* Using Github Backend: <br />
+  Command : ```python github-backend.py```
 
 ![github-backend](img2.png)
 
