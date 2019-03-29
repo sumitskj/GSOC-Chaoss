@@ -3,7 +3,7 @@ For Microtask 6, I have made the python script for cocom-backend [Cocom](cocom-b
 The code on execution requires argument the url of repo. The script on execution gives output the commit dates of all the commits on the repo.
 
 **Example:** 
-*** Cocom Backend:**<br />
+**Cocom Backend:**<br />
 **Coomand:** ```python cocom-backend.py```
 
 **CoLic Backend:** <br />
