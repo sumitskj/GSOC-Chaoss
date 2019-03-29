@@ -1,12 +1,12 @@
 
-1.Which are the common methods of the Graal backends?<br />
+**1.Which are the common methods of the Graal backends?**<br />
   Common methods of Graal backends are fetch(), metadata_category(), analyze(), etc.<br />
 
-2.List and explain at least 2 Git commands used by Graal (and not implemented in Perceval).<br />
+**2.List and explain at least 2 Git commands used by Graal (and not implemented in Perceval).**<br />
   Git commands used by Graal are: <br />
   * worktree() :<br />
     syntax : worktree(self, worktreepath, branch=None):<br />
-    Create a working tree of the cloned repository with the active branch set to `branch`.<br />
+    Create a working tree of the cloned repository with the active branch set to `branch`.The worktree is needed to perform "write" operations (e.g., git checkout), which cannot be done on a git bare repo.<br />
         :param worktreepath: the path where the working tree will be located<br />
         :param branch: the name of the branch. If None, the branch is set to `master`<br />
     
