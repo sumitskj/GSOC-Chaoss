@@ -6,7 +6,8 @@ Now to run a perceval command I went to edit configurations in Run, then I added
 ![setup](img1.png)
 <br />
 ![setup](img3.png)
-
+<br />
+![setup](img4.png)
 <br />
 
 **Running perceval:**<br />

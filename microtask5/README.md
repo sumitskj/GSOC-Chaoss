@@ -6,6 +6,8 @@ Now to run a graal command I went to edit configurations in Run, then I added th
 ![setup](img2.png)
 <br />
 
+![setup](img3.png)
+<br />
 **Running graal output:**<br />
 
 ![command](img1.png)
