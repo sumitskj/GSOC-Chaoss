@@ -13,12 +13,8 @@ I have made the following Pull Requests:
 
 1. In first pull request I solved the issue [#288](https://github.com/chaoss/grimoirelab-sirmordred/issues/288), In which whenever a call to sirmordred is made it used to show some warnings. To remove those warnings I added an extra Loader parameter in yaml.load() call.
 <br />
-<<<<<<< HEAD
+
 2. In second pull request[#77 Grimoirelab-tutorial](https://github.com/chaoss/grimoirelab-tutorial/pull/77#pullrequestreview-220427025) I fixed the typo in the sirmordred command.
 <br />
+
 3. In third pull request [#78 Grimoirelab-tutorial](https://github.com/chaoss/grimoirelab-tutorial/pull/78#pullrequestreview-220426686) I soved a typo in the table name of a command.
-=======
-2. In second pull request[#77](https://github.com/chaoss/grimoirelab-tutorial/pull/77#pullrequestreview-220427025) I fixed the typo in the sirmordred command.
-<br />
-3. In third pull request [#78](https://github.com/chaoss/grimoirelab-tutorial/pull/78#pullrequestreview-220426686) I soved a typo in the table name of a command.
->>>>>>> c5790615a0c0ac34cfb79600c5d600376a51cdc4
