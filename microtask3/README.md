@@ -17,7 +17,7 @@
 **6.Which are the common methods of the Perceval backends?**<br />
   Common methods of perceval backends are:<br />
   * fetch() :<br />
-    syntax : ```fetch(self, category=CATEGORY_COMMIT, from_date=DEFAULT_DATETIME, to_date=DEFAULT_LAST_DATETIME, branches=None, latest_items=False, no_update=False)```<br />
+    syntax : ```fetch(self, category=CATEGORY_COMMIT, from_date=DEFAULT_DATETIME, to_date=DEFAULT_LAST_DATETIME, branches=None, latest_items=False, no_update=False)```<br /><br />
 
     The method retrieves from a Git repository or a log file a list of commits. Commits are returned in the same order they were obtained.<br />
         :param category: the category of items to fetch<br />
@@ -25,28 +25,26 @@
             (inclusive)<br />
         :param to_date: obtain commits older than a specific date<br />
         :param branches: names of branches to fetch from (default: None)<br />
-        :param latest_items: sync with the repository to fetch only the
-            newest commits<br />
+        :param latest_items: sync with the repository to fetch only the newest commits<br />
         :param no_update: if enabled, don't update the repo with the latest changes<br />
-
         :returns: a generator of commits. 
+    <br />
         
 <br />
+
   * has_archiving() :<br />
-    syntax : ```has_archiving(cls)```<br />
-    Returns whether it supports archiving items on the fetch process.
-<br />
-        :returns: this backend does not support items archive<br />
+    syntax : ```has_archiving(cls)```<br /><br />
+    Returns whether it supports archiving items on the fetch process.<br />
+    :returns: this backend does not support items archive<br />
 
 * has_resuming() :<br />
-    syntax : ```has_resuming(cls)```<br />
-Returns whether it supports to resume the fetch process.
-<br />
-                :returns: this backend supports items resuming<br />
+    syntax : ```has_resuming(cls)```<br /><br />
+Returns whether it supports to resume the fetch process.<br />
+    :returns: this backend supports items resuming<br />
 
-* metadata_id(): :<br />
-    syntax : ```metadata_id(item)```<br />
-Extracts the identifier from a Git item.
+* metadata_id(): <br />
+    syntax : ```metadata_id(item)```<br /><br />
+    Extracts the identifier from a Git item.
 <br />
 
 

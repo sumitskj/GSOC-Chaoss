@@ -2,7 +2,7 @@
 **1.Which are the common methods of the Graal backends?**<br />
   Common methods of Graal backends are: <br />
 * fetch() :<br />
-    syntax : ```fetch(self, category=CATEGORY_GRAAL, from_date=DEFAULT_DATETIME, to_date=DEFAULT_LAST_DATETIME,branches=None, latest_items=False)```<br />
+    syntax : ```fetch(self, category=CATEGORY_GRAAL, from_date=DEFAULT_DATETIME, to_date=DEFAULT_LAST_DATETIME,branches=None, latest_items=False)```<br /><br />
     Fetch commits and supports the inclusion of code analysis information. The method retrieves from a repository a list of commits. Commits are returned in the same order they were obtained.<br />
         :param category: the category of items to fetch<br />
         :param from_date: obtain commits newer than a specific date
@@ -11,17 +11,17 @@
         :param branches: names of branches to fetch from (default: None)<br />
         :param latest_items: sync with the repository to fetch only the
             newest commits<br />
-
         :returns: a generator of commits. 
  <br />       
+ 
 * metadata_category() :<br />
-    syntax : ```metadata_category(item)```<br />
+    syntax : ```metadata_category(item)```<br /><br />
     Extracts the category from a Graal item. This backend only generates one type of item which is 'commit'.<br />
 
 * analyze() :<br />
-    syntax : ```_analyze(self, commit)```<br />
+    syntax : ```_analyze(self, commit)```<br /><br />
     Analyze a commit and the corresponding checkout version of the repository <br />
-        :param commit: a Perceval commit item<br />
+    :param commit: a Perceval commit item<br />
     
 **2.List and explain at least 2 Git commands used by Graal (and not implemented in Perceval).**<br />
   Git commands used by Graal are: <br />
