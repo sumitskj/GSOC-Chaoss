@@ -3,17 +3,17 @@ For Microtask 6, I have made the python script for cocom-backend [Cocom](cocom-b
 
 **Example:** 
 **Cocom Backend:**<br />
-**Coomand:** ```python cocom-backend.py```
+**Comand:** ```python cocom-backend.py```
 
 **Output:** <br />
 ![output6](img1.png)<br />
 
 **CoLic Backend:** <br />
 
-* For using CoLic you have to first have Nomos[Cocom](https://github.com/chaoss/grimoirelab-graal) and Scancode[Scancode](https://github.com/chaoss/grimoirelab-graal)
+* For using CoLic you have to first have [Nomos](https://github.com/chaoss/grimoirelab-graal) or [Scancode](https://github.com/chaoss/grimoirelab-graal) backends.
 
 **Command :** ```python colic-backend.py```
-
+<br />
   
 
 **Output:** <br />
