@@ -10,8 +10,8 @@ arg = ['https://github.com/sumitskj/Prajawalan2019.git',
 
 args = parser.parse(*arg)
 
-# scancode exec_path
-exec_path = '/home/sumit/scancode-toolkit-3.0.0/scancode'
+# nomos exec_path
+exec_path = '/home/sumit/fossology/src/nomos/agent/nomossa'
 
 # Colic object initialization
 cc = CoLic(uri=args.uri, git_path=args.git_path, exec_path=exec_path)
