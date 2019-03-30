@@ -16,63 +16,57 @@
 # Author:
 #      Sumit Kumar Jangir <sumitjangirdss.1@gmail.com>
 
-
-
 # imports
-import argparse
+
 import os
 import shutil
-from graal.graal import GraalRepository
+from graal.graal import GraalRepository, GraalCommand
 from graal.backends.core.analyzers.flake8 import Flake8
 
-# Parse command line arguments
-parser = argparse.ArgumentParser(description='Arguments passing')
+# setting graal argument parser
+parser = GraalCommand.setup_cmd_parser()
 
-# adding arguments
-parser.add_argument("-u", "--uri", help="repo url")
-parser.add_argument("-c", "--hash", help="hash")
+arg = ['https://github.com/sumitskj/GSOC-Chaoss.git']
 
-args = parser.parse_args()
+args = parser.parse(*arg)
+
 
 # repository url
 repo_uri = args.uri
 
+# commit SHA
+sha = '9230281aa93a593939f9dfff4a207f9e8140cb4f'
+
+# worktree directory path
+worktreepath = '/tmp/worktrees'
+
 # path of repository cloned
 repo_dir = '/tmp/repo'
 
-# commit SHA
-sha = args.hash
-
 print("Cloning stated..")
 
-# making string - git command to clone
-str = 'git clone --mirror ' + repo_uri + ' /tmp/repo'
+# Cloning the repo if it is not present
+if not GraalRepository.exists(repo_dir):
+    repo = GraalRepository.clone(repo_uri, repo_dir)
+elif os.path.isdir(repo_dir):
+    repo = GraalRepository(repo_uri, repo_dir)
 
-# removing the repositiories earlier stored in /tmp/repo folder
-if os.path.isdir('/tmp/repo'):
-    shutil.rmtree('/tmp/repo')
+# creating a new worktree if not already present
+if GraalRepository.exists(worktreepath):
+    shutil.rmtree(worktreepath)
 
-# Cloning
-os.system(str)
+repo.worktree(worktreepath)
+
+# preforming checkout at given SHA
+repo.checkout(sha)
 
 print("cloning done")
 
-# making an GraalRepository obect
-obj = GraalRepository(uri=repo_uri, dirpath=repo_dir)
-
-# creating an worktree
-obj.worktree(worktreepath='/tmp/worktrees')
-
-# updating worktreepath
-obj.worktreepath = '/tmp/worktrees'
-
-# doing a checkout to the given commit SHA
-obj.checkout(hash=args.hash)
 
 # Using flake8 to find errors if any
 
 flk_args = {
-    'module_path': os.path.join(os.sep, 'tmp', 'repo'),
+    'module_path': os.path.join(os.sep, 'tmp', 'fossology'),
     'worktree_path': '/tmp/worktrees',
     'details': True
 }
@@ -84,6 +78,6 @@ check = flake8.analyze(**flk_args)
 
 print("flake 8 results: ")
 
-for keys, values in check.items():
-    print(keys)
-    print(values)
+for val in check['lines']:
+    print('type:'+val['type_of_warning']+ '  line:'+ val['line']+ '  column:'+ val['column']+ '  desc:'+ val['description'])
+
